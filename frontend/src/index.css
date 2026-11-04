@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-ink bg-paper;
+    background-image: radial-gradient(1200px 600px at 85% -10%, #F4F8F3 0%, transparent 55%);
+    min-height: 100vh;
+  }
+  ::selection {
+    @apply bg-amber/30 text-pine-deep;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-pine ring-offset-2 ring-offset-paper;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+/* ============================================================
+   COMPONENT UTILITIES
+   ============================================================ */
+@layer components {
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Glass card */
+  .card-glass {
+    @apply bg-white/70 backdrop-blur-sm border border-white/80 rounded-2xl;
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-pine bg-pine-tint px-3 py-1.5 rounded-full;
+  }
+
+  /* Gauge SVG fill path animation */
+  .gauge-fill-path {
+    transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Smooth page enter */
+  .page-enter {
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  /* Stagger children */
+  .stagger>* {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .stagger>*:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .stagger>*:nth-child(2) {
+    animation-delay: 0.12s;
+  }
+
+  .stagger>*:nth-child(3) {
+    animation-delay: 0.19s;
+  }
+
+  .stagger>*:nth-child(4) {
+    animation-delay: 0.26s;
+  }
+
+  .stagger>*:nth-child(5) {
+    animation-delay: 0.33s;
+  }
+
+  .stagger>*:nth-child(6) {
+    animation-delay: 0.40s;
+  }
+
+  /* Divider line */
+  .divider {
+    @apply w-12 h-0.5 bg-pine/30 rounded-full;
+  }
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink/10 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink/20;
+}
