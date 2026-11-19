@@ -18,7 +18,7 @@ const CY = 140
 const R = 100
 
 function getScoreBand(score) {
-  if (score < 4) return { label: 'Strained', color: '#D9534F' }
+  if (score < 5) return { label: 'Strained', color: '#D9534F' }
   if (score < 7) return { label: 'Balanced', color: '#E3B341' }
   return { label: 'Strong', color: '#4C9A78' }
 }

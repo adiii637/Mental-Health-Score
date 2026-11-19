@@ -95,10 +95,10 @@ export default function ScoreTrendChart({ trend = [], loading = false }) {
             <span className="w-2 h-2 rounded-full bg-sage" /> Strong (≥ 7.0)
           </span>
           <span className="inline-flex items-center gap-1.5 text-amber-dark">
-            <span className="w-2 h-2 rounded-full bg-amber" /> Balanced (4.0–6.9)
+            <span className="w-2 h-2 rounded-full bg-amber" /> Balanced (5.0–6.9)
           </span>
           <span className="inline-flex items-center gap-1.5 text-coral">
-            <span className="w-2 h-2 rounded-full bg-coral" /> Strained (&lt; 4.0)
+            <span className="w-2 h-2 rounded-full bg-coral" /> Strained (&lt; 5.0)
           </span>
         </div>
       </div>

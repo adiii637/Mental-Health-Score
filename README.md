@@ -84,9 +84,9 @@
 | **Output Target** | Continuous Mental Health Score between `0.0` and `10.0` |
 
 ### Score Classification Bands
-* **Strained (`0.0 – 5.4`):** High digital strain, elevated stress, or low sleep. Requires rest, reduced screen time, and grounding habits.
-* **Balanced (`5.5 – 7.4`):** Stable day-to-day rhythm with room to optimize physical activity and sleep hygiene.
-* **Strong (`7.5 – 10.0`):** Resilient wellness foundation with healthy boundaries around technology, academics, and recovery.
+* **Strained (`0.0 – 4.9`):** High digital strain, elevated stress, or low sleep. Requires rest, reduced screen time, and grounding habits.
+* **Balanced (`5.0 – 6.9`):** Stable day-to-day rhythm with room to optimize physical activity and sleep hygiene.
+* **Strong (`7.0 – 10.0`):** Resilient wellness foundation with healthy boundaries around technology, academics, and recovery.
 
 ---
 

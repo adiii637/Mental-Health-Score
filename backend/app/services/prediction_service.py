@@ -33,7 +33,7 @@ class PredictionService:
     @staticmethod
     def _categorize_score(score: float) -> ScoreCategory:
         """Map numerical score to qualitative wellness band."""
-        if score < 4.0:
+        if score < 5.0:
             return ScoreCategory.STRAINED
         elif score < 7.0:
             return ScoreCategory.BALANCED
